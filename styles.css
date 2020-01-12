@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(219, 233, 226);
+    text-align: center;
+}
+
+.maincontainer {
+    background-color: rgba(92, 177, 177, 0.774);
+    box-shadow: 0 0 3px rgba(29, 51, 59, 0.383);
+    margin: 5% auto;
+    width: 90%;
+    border-radius: 20px;
+}
+
+h1 {
+    background: rgb(38, 114, 117);
+    color: white;
+    margin: 0;
+    padding: 10px 100px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+}
+
+#conversions {
+    
+}
+
+.unitInfo {
+    position: absolute;
+    border: 1px solid black;
+    background: white;
+}
+
+#fInfo, #cInfo, #kInfo, #rInfo {
+    display: none;
+    width: 500px;
+    height: 500px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#fInfo:hover, #f:hover + #fInfo {
+    display: block;
+}
+
+#cInfo:hover, #c:hover + #cInfo {
+    display: block;
+}
+
+#kInfo:hover, #k:hover + #kInfo {
+    display: block;
+}
+
+#rInfo:hover, #r:hover + #rInfo {
+    display: block;
+}
