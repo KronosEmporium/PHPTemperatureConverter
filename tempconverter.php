@@ -41,8 +41,7 @@
             echo '
             <form action="" method="POST">
                 <h1>Temperature Converter</h1>
-                <p>Enter Temperature: <br><input type="number" name="Temperature" />
-                </p>
+                <h3>Enter Temperature: <br><input class="tempinput" type="number" name="Temperature" /></h3>
                 <input type="radio" name="FromTempUnit" value="Fahrenheit" checked> Fahrenheit
                 <input type="radio" name="FromTempUnit" value="Celsius"> Celsius
                 <input type="radio" name="FromTempUnit" value="Kelvin"> Kelvin
@@ -61,45 +60,70 @@
             }
 
             ?>
-            <br>
             
             <em>Note: Values are rounded to the nearest hundredth decimal place after conversion.</em>
-
             <br>
             <br>
-
+            
             <div id="conversions">
-                <!-- <p>Input: <?php if (isset($InputTemp) && isset($InputUnit)) echo $InputTemp . '&deg; ' . $InputUnit; ?></p> -->
+                <!-- <p>Input: <?php if (isset($InputTemp) && isset($InputUnit)) echo $InputTemp . '&deg; ' . $InputUnit; ?></p>
 
 
                 <a id="f">Fahrenheit: <?php if (isset($ftemp)) echo round($ftemp, 2); ?>&deg;F</a>
-                <div class="unitInfo" id="fInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Fahrenheit&printable=yes"></iframe>
+                <div class="unitInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Fahrenheit&printable=yes"></iframe>
                 </div>
 
                 <br>
                 <br>
 
                 <a id="c">Celsius: <?php if (isset($ctemp)) echo round($ctemp, 2); ?>&deg;C</a>
-                <div class="unitInfo" id="cInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Celsius&printable=yes"></iframe>
+                <div class="unitInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Celsius&printable=yes"></iframe>
                 </div>
 
                 <br>
                 <br>
 
                 <a id="k">Kelvin: <?php if (isset($ktemp)) echo round($ktemp, 2); ?>&deg;K</a>
-                <div class="unitInfo" id="kInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Kelvin&printable=yes"></iframe>
+                <div class="unitInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Kelvin&printable=yes"></iframe>
                 </div>
 
                 <br>
                 <br>
 
                 <a id="r">Rankine: <?php if (isset($rtemp)) echo round($rtemp, 2); ?>&deg;Ra</a>
-                <div class="unitInfo" id="rInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Rankine_scale&printable=yes"></iframe>
+                <div class="unitInfo"><iframe src="https://en.wikipedia.org/w/index.php?title=Rankine_scale&printable=yes"></iframe>
+                </div> -->
+
+                <div class="unitInfo">
+                    <a href="https://en.wikipedia.org/w/index.php?title=Fahrenheit&printable=yes" target="iframe_a" id="f">Fahrenheit: <?php if (isset($ftemp)) echo round($ftemp, 2); ?>&deg;F</a>
                 </div>
+
+                <br>
+
+                <div class="unitInfo">
+                    <a href="https://en.wikipedia.org/w/index.php?title=Celsius&printable=yes" target="iframe_a" id="c">Celsius: <?php if (isset($ctemp)) echo round($ctemp, 2); ?>&deg;C</a>
+                </div>
+
+                <br>
+
+                <div class="unitInfo">
+                    <a href="https://en.wikipedia.org/w/index.php?title=Kelvin&printable=yes" target="iframe_a" id="k">Kelvin: <?php if (isset($ktemp)) echo round($ktemp, 2); ?>&deg;K</a>
+                </div>
+
+                <br>
+
+                <div class="unitInfo">
+                    <a href="https://en.wikipedia.org/w/index.php?title=Rankine_scale&printable=yes" target="iframe_a" id="r">Rankine: <?php if (isset($rtemp)) echo round($rtemp, 2); ?>&deg;Ra</a>
+                </div>
+                
             </div>
 
             <br>
-            <br>
+
+            <div id="iframecontainer">
+                <iframe name="iframe_a" srcdoc="<h3>For more information please select one of the temperature links above:</h3>"></iframe>
+            </div>
+
         </div>
     </body>
     <!-- <script>
