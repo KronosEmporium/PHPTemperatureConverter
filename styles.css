@@ -59,9 +59,9 @@ a {
     font-size: 15px;
 }
 
-/* #conversions {
-
-} */
+#conversions {
+    display: none;
+}
 
 /* .unitInfo {
     position: absolute;
